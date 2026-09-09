@@ -30,3 +30,7 @@ export const authorizeRoles = (...allowedRoles: ('ADMIN' | 'USER')[]) => {
     next();
   };
 };
+
+
+export const authenticate = authenticateToken;
+export const requireAdmin = authorizeRoles('ADMIN');
